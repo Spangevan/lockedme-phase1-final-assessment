@@ -17,7 +17,26 @@ public class App
     public static void main( String[] args )
     {
         displayWelcomeScreen();
+    	System.out.println();
+    	System.out.println();
+        displayMainMenue();
     }
+    
+    
+    
+    
+    
+    private static void displayMainMenue() {
+    	System.out.println("~+~+~+~+- MAIN MENU -~+~+~+~+");
+    	System.out.println();
+        System.out.println("1.) Display all files in ascending order");
+        System.out.println("2.) File Operations Menu");
+        System.out.println("3.) Quit the application");
+    	System.out.println();
+        System.out.println("~+~+~+~+~+~+~+~+~+~+~+~+~+~+~");
+    	
+    }
+    
     
     private static void displayWelcomeScreen() {
     	System.out.println("~||~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~||~");
