@@ -24,7 +24,9 @@ public class App {
 	}
 
 	private static void inputMainMenuChoice() throws InvalidPathException, IOException {
+		System.out.println("~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~");
 		System.out.println("Please select option 1, 2 or 3:");
+		System.out.println("~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~");
 		String option = scanner.nextLine();
 		switch (option) {
 		case "1":
@@ -46,7 +48,9 @@ public class App {
 	}
 
 	private static void inputFileOperationChoice() throws InvalidPathException, IOException {
+		System.out.println("~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~");
 		System.out.println("Please select option 1, 2, 3, or 4:");
+		System.out.println("~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~");
 		String fileOption = scanner.nextLine();
 		switch (fileOption) {
 		case "1":
@@ -70,7 +74,9 @@ public class App {
 	}
 
 	private static void searchforFile() {
+		System.out.println("~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~");
 		System.out.println("Please type the path of a file to search for:");
+		System.out.println("~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~");
 		String fileSearch = scanner.nextLine();
 		Path searchPath = Paths.get(fileSearch);
 
@@ -86,7 +92,9 @@ public class App {
 	}
 
 	private static void deleteFile() throws IOException {
+		System.out.println("~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~");
 		System.out.println("Please type the path of one of the following files that you would like to delete");
+		System.out.println("~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~");
 		displayFilesInAscendingOrder();
 		System.out.println();
 		String fileToBeDeleted = scanner.nextLine();
@@ -108,7 +116,9 @@ public class App {
 	}
 
 	private static void addFile() throws InvalidPathException, IOException {
+		System.out.println("~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~");
 		System.out.println("Please provide a file path:");
+		System.out.println("~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~");
 		String filePath = scanner.nextLine();
 		Path path = Paths.get(filePath);
 
@@ -133,17 +143,17 @@ public class App {
 	}
 
 	private static void displayFileOperations() throws InvalidPathException, IOException {
-		System.out.println("~+~+~+~+~+~+~+~+~+~+~+~+~+~+~");
+		System.out.println("~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~");
 		System.out.println("1.) Add a file to the directory");
 		System.out.println("2.) Delete a file from the directory");
 		System.out.println("3.) Search for a file in the directory");
 		System.out.println("4.) Return to main menu");
-		System.out.println("~+~+~+~+~+~+~+~+~+~+~+~+~+~+~");
+		System.out.println("~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~");
 		inputFileOperationChoice();
 	}
 
 	private static void displayFilesInAscendingOrder() {
-		System.out.println("~+~+~+~+~+~+~+~+~+~+~+~+~+~+~");
+		System.out.println("~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~");
 		System.out.println("All files organized in ascending order:");
 		File[] files = new File(DIRECTORY).listFiles();
 		Set<String> sortedFiles = new TreeSet<>();
@@ -154,7 +164,8 @@ public class App {
 			sortedFiles.add(file.getName());
 		}
 		sortedFiles.forEach(System.out::println);
-		System.out.println("~+~+~+~+~+~+~+~+~+~+~+~+~+~+~");
+		System.out.println("~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~");
+		System.out.println();
 
 	}
 
