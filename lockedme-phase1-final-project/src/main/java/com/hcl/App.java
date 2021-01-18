@@ -32,9 +32,23 @@ public class App {
 		case "2":
 
 		case "3":
+			 System.out.println("Thanks for using lockedme.com. Closing application.");
+             System.exit(0);
+             break;
 
 		}
 	}
+	
+	
+	
+	private static void displayFileOperations() {
+		System.out.println("~+~+~+~+~+~+~+~+~+~+~+~+~+~+~");
+        System.out.println("1.) Add a file to the directory");
+        System.out.println("2.) Delete a file from the directory");
+        System.out.println("3.) Search for a file in the directory");
+        System.out.println("4.) Return to main menu");
+		System.out.println("~+~+~+~+~+~+~+~+~+~+~+~+~+~+~");
+    }
 	
 	
 	private static void displayFilesInAscendingOrder() {
