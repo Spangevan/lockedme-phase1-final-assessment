@@ -35,8 +35,7 @@ public class App {
 			displayFileOperations();
 
 		case "3":
-			System.out.println("Closing application.");
-			System.exit(0);
+			displayCloseScreen();
 			break;
 		default:
 			System.out.println("Invalid selection. Please choose 1, 2, or 3");
@@ -167,6 +166,29 @@ public class App {
 		System.out.println("~+~+~+~+~+~+~+~+~+~+~+~+~+~+~");
 		inputMainMenuChoice();
 
+	}
+	
+	private static void displayCloseScreen() {
+		
+		System.out.println("~||~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~||~");
+		System.out.println("+||~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~||+");
+		System.out.println("~|| ==============                                             \\  //                      ||~");
+		System.out.println("+||       ||        ||                          || //           \\//                       ||+");
+		System.out.println("~||       ||        ||=====     ===     ||===   ||//            ||     ====    ||    ||   ||~");
+		System.out.println("+||       ||        ||    ||   || ||\\   ||   |  ||\\             ||    ||  ||   ||    ||   ||+");
+		System.out.println("~||       ||        ||    ||    ===  \\  ||   |  || \\            ||    ||  ||   ||    ||   ||~");
+		System.out.println("+||                                                                    ====      ====     ||+");
+		System.out.println("~||                                                                                       ||~");
+		System.out.println("+||                                                                                       ||+");
+		System.out.println("~||                                                                                       ||~");
+		System.out.println("+||Thank you for using the LockedMe.com file application.                                 ||+");
+		System.out.println("~||                                                                                       ||~");
+		System.out.println("+||Closing the application. Goodbye!                                                      ||+");
+		System.out.println("~||                                                                                       ||~");
+		System.out.println("+||~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~||+");
+		System.out.println("~||~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~||~");
+		System.exit(0);
+		
 	}
 
 	private static void displayWelcomeScreen() {
