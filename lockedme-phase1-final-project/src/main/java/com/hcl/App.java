@@ -58,7 +58,7 @@ public class App {
 			break;
 		case "2":
 			deleteFile();
-
+			break;
 		case "3":
 			searchforFile();
 			break;
@@ -143,17 +143,17 @@ public class App {
 	}
 
 	private static void displayFileOperations() throws InvalidPathException, IOException {
-		System.out.println("~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~");
+		System.out.println("~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~");
 		System.out.println("1.) Add a file to the directory");
 		System.out.println("2.) Delete a file from the directory");
 		System.out.println("3.) Search for a file in the directory");
 		System.out.println("4.) Return to main menu");
-		System.out.println("~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~");
+		System.out.println("~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~");
 		inputFileOperationChoice();
 	}
 
 	private static void displayFilesInAscendingOrder() {
-		System.out.println("~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~");
+		System.out.println("~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~");
 		System.out.println("All files organized in ascending order:");
 		File[] files = new File(DIRECTORY).listFiles();
 		Set<String> sortedFiles = new TreeSet<>();
@@ -164,19 +164,19 @@ public class App {
 			sortedFiles.add(file.getName());
 		}
 		sortedFiles.forEach(System.out::println);
-		System.out.println("~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~");
+		System.out.println("~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~");
 		System.out.println();
 
 	}
 
 	private static void displayMainMenu() throws InvalidPathException, IOException {
-		System.out.println("~+~+~+~+- MAIN MENU -~+~+~+~+");
+		System.out.println("~+~+~+~+- MAIN MENU -~+~+~+~+~+");
 		System.out.println();
 		System.out.println("1.) Display all files in ascending order");
 		System.out.println("2.) File Operations Menu");
 		System.out.println("3.) Quit the application");
 		System.out.println();
-		System.out.println("~+~+~+~+~+~+~+~+~+~+~+~+~+~+~");
+		System.out.println("~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~");
 		inputMainMenuChoice();
 
 	}
@@ -220,6 +220,8 @@ public class App {
 		System.out.println("~||                                                                               ||~");
 		System.out.println("+||Developer: Evan Spangenberg                                                    ||+");
 		System.out.println("~||                                                                               ||~");
+		System.out.println("~||In order to interact with the application, please type the corresponding       ||~");
+		System.out.println("~||number in the command line, followed by the enter key to select an option!     ||~");
 		System.out.println("+||~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~||+");
 		System.out.println("~||~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~||~");
 
