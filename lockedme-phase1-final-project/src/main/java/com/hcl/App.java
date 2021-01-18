@@ -17,6 +17,13 @@ public class App {
 	static Scanner scanner = new Scanner(System.in);
 
 	public static void main(String[] args) throws InvalidPathException, IOException {
+		
+		Path rootDirectory = Paths.get(DIRECTORY);
+		if (!Files.exists(rootDirectory)) {
+			Files.createDirectory(rootDirectory);
+			
+		}
+		
 		displayWelcomeScreen();
 		System.out.println();
 		System.out.println();
