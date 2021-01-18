@@ -54,17 +54,34 @@ public class App {
 			break;
 		case "2":
 			deleteFile();
-			
+
 		case "3":
+			searchforFile();
 			break;
 		case "4":
 			displayMainMenu();
 			break;
-			default:
-				System.out.println("Invalid slecetion. Please select 1, 2, 3 or 4");
+		default:
+			System.out.println("Invalid slecetion. Please select 1, 2, 3 or 4");
 
 		}
 		displayFileOperations();
+	}
+
+	private static void searchforFile() {
+		System.out.println("Please type the path of a file to search for:");
+		String fileSearch = scanner.nextLine();
+		Path searchPath = Paths.get(fileSearch);
+
+		if (!Files.exists(searchPath)) {
+			System.out.println("We are sorry, the file you have searched for does not exist.");
+			System.out.println();
+			return;
+		} else {
+			System.out.println("The file you have searched for exists!!");	
+			System.out.println();
+		}
+
 	}
 
 	private static void deleteFile() throws IOException {
@@ -73,7 +90,7 @@ public class App {
 		System.out.println();
 		String fileToBeDeleted = scanner.nextLine();
 		Path deletePath = Paths.get(fileToBeDeleted);
-		
+
 		if (!Files.exists(deletePath)) {
 			System.out.println("Sorry, the specified file does not exist");
 			return;
