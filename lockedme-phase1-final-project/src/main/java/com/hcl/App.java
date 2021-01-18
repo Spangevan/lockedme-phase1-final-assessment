@@ -16,14 +16,14 @@ public class App {
 
 	static Scanner scanner = new Scanner(System.in);
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InvalidPathException, IOException {
 		displayWelcomeScreen();
 		System.out.println();
 		System.out.println();
 		displayMainMenu();
 	}
 
-	private static void inputMainMenuChoice() {
+	private static void inputMainMenuChoice() throws InvalidPathException, IOException {
 		System.out.println("Please select option 1, 2 or 3:");
 		String option = scanner.nextLine();
 		switch (option) {
@@ -45,7 +45,7 @@ public class App {
 		displayMainMenu();
 	}
 
-	private static void inputFileOperationChoice() {
+	private static void inputFileOperationChoice() throws InvalidPathException, IOException {
 		System.out.println("Please select option 1, 2, 3, or 4:");
 		String fileOption = scanner.nextLine();
 		switch (fileOption) {
@@ -67,8 +67,8 @@ public class App {
 		displayFileOperations();
 	}
 
-	private static void deleteFile() {
-		System.out.println("Please type the name of one of the following files that you would like to delete");
+	private static void deleteFile() throws IOException {
+		System.out.println("Please type the path of one of the following files that you would like to delete");
 		displayFilesInAscendingOrder();
 		System.out.println();
 		String fileToBeDeleted = scanner.nextLine();
@@ -78,17 +78,25 @@ public class App {
 			System.out.println("Sorry, the specified file does not exist");
 			return;
 
+		} else {
+			Files.delete(deletePath);
+			System.out.println();
+			System.out.println("Thank you! You have successfully deleted the file");
+			System.out.println("Returing you to the previous menu.");
+			System.out.println();
+
 		}
 
 	}
 
-	private static void addFile() throws InvalidPathException {
+	private static void addFile() throws InvalidPathException, IOException {
 		System.out.println("Please provide a file path:");
 		String filePath = scanner.nextLine();
 		Path path = Paths.get(filePath);
 
 		if (!Files.exists(path)) {
-			System.out.println("Sorry, the specified file does not exist");
+			Files.createFile(path);
+			System.out.println("You have succesfully created a file, and it has been added to the target directory.");
 			return;
 		}
 
@@ -106,7 +114,7 @@ public class App {
 
 	}
 
-	private static void displayFileOperations() {
+	private static void displayFileOperations() throws InvalidPathException, IOException {
 		System.out.println("~+~+~+~+~+~+~+~+~+~+~+~+~+~+~");
 		System.out.println("1.) Add a file to the directory");
 		System.out.println("2.) Delete a file from the directory");
@@ -132,7 +140,7 @@ public class App {
 
 	}
 
-	private static void displayMainMenu() {
+	private static void displayMainMenu() throws InvalidPathException, IOException {
 		System.out.println("~+~+~+~+- MAIN MENU -~+~+~+~+");
 		System.out.println();
 		System.out.println("1.) Display all files in ascending order");
