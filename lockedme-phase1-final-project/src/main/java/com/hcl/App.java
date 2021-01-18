@@ -30,11 +30,28 @@ public class App {
 			displayFilesInAscendingOrder();
 			break;
 		case "2":
+			displayFileOperations();
 
 		case "3":
 			 System.out.println("Thanks for using lockedme.com. Closing application.");
              System.exit(0);
              break;
+
+		}
+	}
+	
+	private static void inputFileOperationChoice() {
+		System.out.println("Please select option 1, 2, 3, or 4:");
+		String fileOption = scanner.nextLine();
+		switch(fileOption) {
+		case "1":
+			
+		case "2":
+			
+		case "3":
+			
+		case "4":
+			displayMainMenue();
 
 		}
 	}
@@ -48,6 +65,7 @@ public class App {
         System.out.println("3.) Search for a file in the directory");
         System.out.println("4.) Return to main menu");
 		System.out.println("~+~+~+~+~+~+~+~+~+~+~+~+~+~+~");
+		inputFileOperationChoice();
     }
 	
 	
