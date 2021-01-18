@@ -39,6 +39,7 @@ public class App {
 			break;
 		default:
 			System.out.println("Invalid selection. Please choose 1, 2, or 3");
+			System.out.println();
 
 		}
 		displayMainMenu();
@@ -62,6 +63,7 @@ public class App {
 			break;
 		default:
 			System.out.println("Invalid slecetion. Please select 1, 2, 3 or 4");
+			System.out.println();
 
 		}
 		displayFileOperations();
